@@ -1,16 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net472;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net472;net5.0</TargetFrameworks>
     <DisableFody>true</DisableFody>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="FodyHelpers" Version="6.5.2" />
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="Verify.Xunit" Version="11.20.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
-    <Reference Include="Microsoft.CSharp" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PropertyChanged.Fody\PropertyChanged.Fody.csproj" />
     <ProjectReference Include="..\PropertyChanged\PropertyChanged.csproj" />
     <ProjectReference Include="..\TestAssemblies\AssemblyExplicitPropertyChanged\AssemblyExplicitPropertyChanged.csproj" />
@@ -34,4 +37,5 @@
     <ProjectReference Include="..\TestAssemblies\AssemblyWithTypeFilter\AssemblyWithTypeFilter.csproj" />
     <ProjectReference Include="..\TestAssemblies\AssemblyWithInheritance\AssemblyWithInheritance.csproj" />
   </ItemGroup>
+
 </Project>
